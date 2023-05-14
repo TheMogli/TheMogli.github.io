@@ -1,13 +1,57 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+  <title>Website Example</title>
+  <style>
+    /* CSS to center the image */
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px; /* Adjust as needed */
+    }
+  </style>
+  <script>
+    function checkInputs() {
+      var input1 = document.getElementById("input1").value;
+      var input2 = document.getElementById("input2").value;
+      var input3 = document.getElementById("input3").value;
+      
+      // Check if all inputs are correct
+      if (input1 === "Correct" && input2 === "Correct" && input3 === "Correct") {
+        alert("All inputs are correct!");
+      } else {
+        alert("Some inputs are incorrect. Please try again.");
+      }
+    }
+  </script>
 </head>
 <body>
-	<h1>Super</h1>
-	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+  <div class="center">
+    <img src="path/to/your/image.jpg" alt="Image">
+  </div>
+  
+  <div>
+    <label for="input1">Input 1:</label>
+    <input type="text" id="input1">
+  </div>
+  
+  <div>
+    <label for="input2">Input 2:</label>
+    <input type="text" id="input2">
+  </div>
+  
+  <div>
+    <label for="input3">Input 3:</label>
+    <input type="text" id="input3">
+  </div>
+  
+  <div>
+    <button onclick="checkInputs()">Check Inputs</button>
+  </div>
+  
+  <div id="hiddenButton" style="display: none;">
+    <button>This button is hidden</button>
+  </div>
 </body>
 </html>
