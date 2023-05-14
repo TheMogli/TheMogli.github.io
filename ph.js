@@ -1,13 +1,5 @@
-// hiddenText.js
-
-// Create a new element
-var hiddenText = document.createElement('div');
+// Retrieve the target element
+const dynamicTextElement = document.getElementById('dynamic-text');
 
 // Set the text content of the element
-hiddenText.textContent = "PLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDERPLACEHOLDER";
-
-
-
-// Append the hidden text element to the container
-var container = document.getElementById('hidden-container');
-container.appendChild(hiddenText);
+dynamicTextElement.textContent = 'This text is added dynamically using JavaScript.';
