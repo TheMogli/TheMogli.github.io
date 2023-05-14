@@ -3,12 +3,60 @@
 <head>
   <title>Website Example</title>
   <style>
-    /* CSS to center the image */
+    /* CSS to center the image and make it resize automatically */
+    body {
+      background-color: darkgrey;
+      color: white; /* Adjust text color for better visibility */
+    }
+    
     .center {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 300px; /* Adjust as needed */
+    }
+    
+    .center img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    
+    #inputs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+    
+    #inputs input[type="text"] {
+      margin: 0 5px;
+    }
+    
+    #labels {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5px;
+    }
+    
+    #labels label {
+      margin: 0 5px;
+    }
+    
+    #buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+    
+    #buttons button {
+      margin: 0 5px;
+    }
+    
+    /* CSS to unhide the hidden button */
+    #hiddenButton.show {
+      display: block !important;
     }
   </style>
   <script>
@@ -28,30 +76,40 @@
 </head>
 <body>
   <div class="center">
-    <img src="path/to/your/image.jpg" alt="Image">
+    <img src="/Kuramon.jpg" alt="Image">
   </div>
   
-  <div>
-    <label for="input1">Input 1:</label>
+  <div id="inputs">
     <input type="text" id="input1">
-  </div>
-  
-  <div>
-    <label for="input2">Input 2:</label>
+    <span>-</span>
     <input type="text" id="input2">
-  </div>
-  
-  <div>
-    <label for="input3">Input 3:</label>
+    <span>-</span>
     <input type="text" id="input3">
   </div>
   
-  <div>
+  <div id="labels">
+    <label for="input1">Input 1:</label>
+    <label for="input2">Input 2:</label>
+    <label for="input3">Input 3:</label>
+  </div>
+  
+  <div id="buttons">
     <button onclick="checkInputs()">Check Inputs</button>
   </div>
   
   <div id="hiddenButton" style="display: none;">
     <button>This button is hidden</button>
   </div>
+  
+  <script>
+    // Flag for the hidden button
+    var flag = false;
+    
+    // Check if the flag is set in the developer tools
+    if (flag) {
+      var hiddenButton = document.getElementById("hiddenButton");
+      hiddenButton.classList.add("show");
+    }
+  </script>
 </body>
 </html>
