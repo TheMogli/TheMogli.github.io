@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>burp</title>
+        <title>test</title>
         <script src="ph.js"></script>
         <div id="dynamic-text"></div>
         <style>/* CSS to center the image and make it resize automatically */
@@ -69,7 +69,30 @@
     }
   
     }</style>
-
+        <script>function checkInputs() {
+      var input1 = document.getElementById("input1").value;
+      var input2 = document.getElementById("input2").value;
+      var input3 = document.getElementById("input3").value;
+      
+      // Check if all inputs are correct
+      if (input1 === "Correct" &amp;&amp; input2 === "Correct" &amp;&amp; input3 === "Correct") {
+        alert("All inputs are correct!");
+      } else {
+        alert("Some inputs are incorrect. Please try again.");
+      }
+    }
+    
+    // Set the values of the inputs at runtime
+    window.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("input1").value = "Correct";
+      document.getElementById("input2").value = "Correct";
+      document.getElementById("input3").value = "Correct";
+    });
+    
+    // Function to handle image click
+    function handleImageClick() {
+      alert("Image clicked!");
+    }</script>
     </head>
     <body>
         <div class="center">
@@ -90,13 +113,14 @@
             <span>-</span>
             <label for="input3">175</label>
         </div>
-        <div id="dynamic-text" style="width:508px;height:20px;left:auto;top:auto;"></div>
+        <div id="dynamic-text" style="width:508px;height:px;left:auto;top:auto;"></div>
         <div id="buttons">
             <button onclick="checkInputs()" style="transform-origin:99.9062px -12.5px;">Check Inputs</button>
         </div>
         <div id="dynamic-text"></div>
-        
+        <script>function handleImageClick() {
+          alert("Image clicked!");
+         }</script>
         <script src="ph.js"></script>
     </body>
-    <div id="dynamic-text"></div>
 </html>
