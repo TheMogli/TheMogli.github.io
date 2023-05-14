@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>best</title>
@@ -65,15 +66,8 @@
       height: 1px;
       margin-top: 10px;
     }
-    
-
-    #dynamic-text{
-      background-color: darkgrey;
-      height: 1px;
-      margin-top: 10px;
-    }
-
-    </style>
+  
+    }</style>
         <script>function checkInputs() {
       var input1 = document.getElementById("input1").value;
       var input2 = document.getElementById("input2").value;
@@ -100,7 +94,6 @@
     }</script>
     </head>
     <body>
-      <div id="hidden-container"></div> 
         <div class="center">
             <img src="/Kuramon.jpg" alt="Image" onclick="handleImageClick()" style="transform-origin:195px -33.484px;">
             <!-- Added onclick event -->
@@ -119,14 +112,14 @@
             <span>-</span>
             <label for="input3">175</label>
         </div>
-        <div id="dynamic-text"></div>
+        <div id="dynamic-text" style="width:508px;height:1px;left:auto;top:auto;"></div>
         <div id="buttons">
-            <button onclick="checkInputs()">Check Inputs</button>
+            <button onclick="checkInputs()" style="transform-origin:99.9062px -12.5px;">Check Inputs</button>
         </div>
         <div id="dynamic-text"></div>
         <script>function handleImageClick() {
           alert("Image clicked!");
          }</script>
-    <script src="ph.js"></script>
+        <script src="ph.js"></script>
     </body>
 </html>
