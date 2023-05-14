@@ -1,7 +1,9 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Babygirl holds a key</title>
-        <style>/* CSS to center the image and make it resize automatically */
+<head>
+  <title>Website Example</title>
+  <style>
+    /* CSS to center the image and make it resize automatically */
     html {
       background-color: darkgrey;
     }
@@ -16,12 +18,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 500px; /* Adjust as needed */
+      height: 500px; /* Adjusted to 500px */
     }
     
     .center img {
       max-width: 100%;
       max-height: 100%;
+      cursor: pointer; /* Added cursor style for clickable image */
     }
     
     #inputs {
@@ -53,21 +56,30 @@
       margin-top: 10px;
     }
     
-    #buttons button {
-      margin: 0 5px;
-    }
-    
     /* CSS to unhide the hidden button */
     #hiddenButton.show {
       display: block !important;
-    }</style>
-        <script>function checkInputs() {
+    }
+    
+    #topLine {
+      background-color: darkgrey;
+      height: 1px;
+      margin-top: 10px;
+    }
+    
+    #topLine span {
+      color: darkgrey;
+      font-size: 0;
+    }
+  </style>
+  <script>
+    function checkInputs() {
       var input1 = document.getElementById("input1").value;
       var input2 = document.getElementById("input2").value;
       var input3 = document.getElementById("input3").value;
       
       // Check if all inputs are correct
-      if (input1 === "Correct" &amp;&amp; input2 === "Correct" &amp;&amp; input3 === "Correct") {
+      if (input1 === "Correct" && input2 === "Correct" && input3 === "Correct") {
         alert("All inputs are correct!");
       } else {
         alert("Some inputs are incorrect. Please try again.");
@@ -76,40 +88,47 @@
     
     // Set the values of the inputs at runtime
     window.addEventListener("DOMContentLoaded", function() {
-      document.getElementById("input1").value = "";
-      document.getElementById("input2").value = "";
-      document.getElementById("input3").value = "";
+      document.getElementById("input1").value = "Correct";
+      document.getElementById("input2").value = "Correct";
+      document.getElementById("input3").value = "Correct";
     });
     
-    // Function to toggle visibility of the hidden button
-    function toggleHiddenButton() {
-      var hiddenButton = document.getElementById("hiddenButton");
-      hiddenButton.classList.toggle("show");
-    }</script>
-    </head>
-    <div></div>
-    <div class="center">
-        <img src="/Kuramon.jpg" alt="Image">
-    </div>
-    <div id="inputs">
-        <input type="text" id="input1">
-        <span>-</span>
-        <input type="text" id="input2">
-        <span>-</span>
-        <input type="text" id="input3">
-    </div>
-    <div id="labels">
-        <label for="input1">156</label>
-        <span>-</span>
-        <label for="input2">14C</label>
-        <span>-</span>
-        <label for="input3">175</label>
-    </div>
-    <div id="buttons">
-        <button onclick="checkInputs()">Check Inputs</button>
-        <button onclick="toggleHiddenButton()">Toggle Hidden Button</button>
-    </div>
-    <div id="hiddenButton" style="display:none;">
-        <button>This button is hidden</button>
-    </div>
+    // Function to handle image click
+    function handleImageClick() {
+      alert("Image clicked!");
+    }
+  </script>
+</head>
+<body>
+  <div id="topLine">
+    <span>PLACEHOLDER</span>
+  </div>
+  
+  <div class="center">
+    <img src="/Kuramon.jpg" alt="Image" onclick="handleImageClick()"> <!-- Added onclick event -->
+  </div>
+  
+  <div id="inputs">
+    <input type="text" id="input1">
+    <span>-</span>
+    <input type="text" id="input2">
+    <span>-</span>
+    <input type="text" id="input3">
+  </div>
+  
+  <div id="labels">
+    <label for="input1">156</label>
+    <label for="input2">14C</label>
+    <label for="input3">175</label>
+  </div>
+  
+  <div id="buttons">
+    <button onclick="checkInputs()">Check Inputs</button>
+  </div>
+  <script>
+    function handleImageClick() {
+      alert("Image clicked!");
+    }
+  </script>
+</body>
 </html>
