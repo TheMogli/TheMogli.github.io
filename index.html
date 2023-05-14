@@ -36,6 +36,8 @@
     
     #inputs input[type="text"] {
       margin: 0 5px;
+      width: 50px; /* Adjust the width as needed */
+      text-align: center; /* Center the text within the input */
     }
     
     #labels {
@@ -70,36 +72,6 @@
     }
   </style>
   <script src="ph.js"></script>
-  <script>
-    function checkInputs() {
-      var input1 = document.getElementById("input1").value;
-      var input2 = document.getElementById("input2").value;
-      var input3 = document.getElementById("input3").value;
-      
-      // Check if all inputs are correct
-      if (input1 === "Correct" && input2 === "Correct" && input3 === "Correct") {
-        alert("All inputs are correct!");
-      } else {
-        alert("Some inputs are incorrect. Please try again.");
-      }
-    }
-    
-    // Set the values of the inputs at runtime
-    window.addEventListener("DOMContentLoaded", function() {
-      document.getElementById("input1").value = "Correct";
-      document.getElementById("input2").value = "Correct";
-      document.getElementById("input3").value = "Correct";
-      
-      // Dynamically set the content of the topLine element
-      var topLineElement = document.getElementById("topLine");
-      topLineElement.textContent = "PLACEHOLDER";
-    });
-    
-    // Function to handle image click
-    function handleImageClick() {
-      alert("Image clicked!");
-    }
-  </script>
 </head>
 <body>
   <div id="topLine"></div>
@@ -120,11 +92,12 @@
     <label for="input1">156</label>
     <label for="input2">14C</label>
     <label for="input3">175</label>
-    
-      </div>
-      <div id="buttons">
-        <button onclick="checkInputs()">Check Inputs</button>
-      </div>
-      <div id="dynamicText"></div>
-    </body>
-    </html>
+  </div>
+  
+  <div id="buttons">
+    <button onclick="checkInputs()">Check Inputs</button>
+  </div>
+  
+  <div id="dynamicText"></div>
+</body>
+</html>
