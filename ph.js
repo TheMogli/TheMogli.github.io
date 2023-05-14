@@ -1,5 +1,8 @@
-// Retrieve the target element
-const dynamicTextElement = document.getElementById('dynamic-text');
+// ph.js
 
-// Set the text content of the element
-dynamicTextElement.textContent = 'This text is added dynamically using JavaScript.';
+window.addEventListener("DOMContentLoaded", function() {
+    var dynamicTextElement = document.getElementById("dynamicText");
+    
+    // Update dynamic text
+    dynamicTextElement.textContent = "This is dynamically generated text!";
+  });
