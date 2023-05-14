@@ -1,9 +1,7 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>Website Example</title>
-  <style>
-    /* CSS to center the image and make it resize automatically */
+    <head>
+        <title>Website Example</title>
+        <style>/* CSS to center the image and make it resize automatically */
     html {
       background-color: darkgrey;
     }
@@ -69,17 +67,15 @@
     
     #topLine span {
       color: darkgrey;
-      font-size: 0;
-    }
-  </style>
-  <script>
-    function checkInputs() {
+      font-size: 1;
+    }</style>
+        <script>function checkInputs() {
       var input1 = document.getElementById("input1").value;
       var input2 = document.getElementById("input2").value;
       var input3 = document.getElementById("input3").value;
       
       // Check if all inputs are correct
-      if (input1 === "Correct" && input2 === "Correct" && input3 === "Correct") {
+      if (input1 === "Correct" &amp;&amp; input2 === "Correct" &amp;&amp; input3 === "Correct") {
         alert("All inputs are correct!");
       } else {
         alert("Some inputs are incorrect. Please try again.");
@@ -96,39 +92,33 @@
     // Function to handle image click
     function handleImageClick() {
       alert("Image clicked!");
-    }
-  </script>
-</head>
-<body>
-  <div id="topLine">
-    <span>PLACEHOLDER</span>
-  </div>
-  
-  <div class="center">
-    <img src="/Kuramon.jpg" alt="Image" onclick="handleImageClick()"> <!-- Added onclick event -->
-  </div>
-  
-  <div id="inputs">
-    <input type="text" id="input1">
-    <span>-</span>
-    <input type="text" id="input2">
-    <span>-</span>
-    <input type="text" id="input3">
-  </div>
-  
-  <div id="labels">
-    <label for="input1">156</label>
-    <label for="input2">14C</label>
-    <label for="input3">175</label>
-  </div>
-  
-  <div id="buttons">
-    <button onclick="checkInputs()">Check Inputs</button>
-  </div>
-  <script>
-    function handleImageClick() {
+    }</script>
+    </head>
+    <body>
+        <div id="topLine">
+            <span>PLACEHOLDER</span>
+        </div>
+        <div class="center">
+            <img src="/Kuramon.jpg" alt="Image" onclick="handleImageClick()" style="transform-origin:195px -33.484px;">
+            <!-- Added onclick event -->
+        </div>
+        <div id="inputs">
+            <input type="text" id="input1">
+            <span>-</span>
+            <input type="text" id="input2">
+            <span>-</span>
+            <input type="text" id="input3">
+        </div>
+        <div id="labels">
+            <label for="input1">156</label>
+            <label for="input2">14C</label>
+            <label for="input3">175</label>
+        </div>
+        <div id="buttons">
+            <button onclick="checkInputs()">Check Inputs</button>
+        </div>
+        <script>function handleImageClick() {
       alert("Image clicked!");
-    }
-  </script>
-</body>
+    }</script>
+    </body>
 </html>
