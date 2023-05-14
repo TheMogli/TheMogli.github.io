@@ -4,9 +4,14 @@
   <title>Website Example</title>
   <style>
     /* CSS to center the image and make it resize automatically */
-    body {
+    html {
       background-color: darkgrey;
+    }
+    
+    body {
       color: white; /* Adjust text color for better visibility */
+      margin: 0;
+      padding: 0;
     }
     
     .center {
@@ -72,6 +77,19 @@
         alert("Some inputs are incorrect. Please try again.");
       }
     }
+    
+    // Set the values of the inputs at runtime
+    window.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("input1").value = "Correct";
+      document.getElementById("input2").value = "Correct";
+      document.getElementById("input3").value = "Correct";
+    });
+    
+    // Function to toggle visibility of the hidden button
+    function toggleHiddenButton() {
+      var hiddenButton = document.getElementById("hiddenButton");
+      hiddenButton.classList.toggle("show");
+    }
   </script>
 </head>
 <body>
@@ -90,26 +108,14 @@
   <div id="labels">
     <label for="input1">156</label>
     <label for="input2">14C</label>
-    <label for="input3">175:</label>
+    <label for="input3">175</label>
   </div>
   
   <div id="buttons">
     <button onclick="checkInputs()">Check Inputs</button>
+    <button onclick="toggleHiddenButton()">Toggle Hidden Button</button>
   </div>
   
   <div id="hiddenButton" style="display: none;">
     <button>This button is hidden</button>
   </div>
-  
-  <script>
-    // Flag for the hidden button
-    var flag = false;
-    
-    // Check if the flag is set in the developer tools
-    if (flag) {
-      var hiddenButton = document.getElementById("hiddenButton");
-      hiddenButton.classList.add("show");
-    }
-  </script>
-</body>
-</html>
