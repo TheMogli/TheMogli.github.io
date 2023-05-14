@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", function() {
     var dynamicTextElement = document.getElementById("dynamicText");
     
     // Update dynamic text
-    dynamicTextElement.textContent = "This is dynamically generated text!";
+    dynamicTextElement.textContent = "PLACEHOLDER";
   });
   
   function handleImageClick() {
@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", function() {
     
     // Check if all inputs are correct
     if (input1 === "Correct" && input2 === "Correct" && input3 === "Correct") {
-      alert("All inputs are correct!");
+      alert("Correct! But where to use this?");
     } else {
       alert("Some inputs are incorrect. Please try again.");
     }
