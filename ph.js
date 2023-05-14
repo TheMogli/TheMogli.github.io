@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", function() {
     var input3 = document.getElementById("input3").value;
     
     // Check if all inputs are correct
-    if (input1 === "Correct" && input2 === "Correct" && input3 === "Correct") {
+    if (input1 === "LVK54" && input2 === "BA4TA" && input3 === "TXPE4") {
       alert("Correct! But where to use this?");
     } else {
       alert("Some inputs are incorrect. Please try again.");
