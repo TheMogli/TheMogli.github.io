@@ -11,16 +11,3 @@ window.addEventListener("DOMContentLoaded", function() {
     alert("Image clicked!");
   }
   
-  function checkInputs() {
-    var input1 = document.getElementById("input1").value;
-    var input2 = document.getElementById("input2").value;
-    var input3 = document.getElementById("input3").value;
-    
-    // Check if all inputs are correct
-    if (input1 === "" && input2 === "" && input3 === "") {
-      alert("Correct! But where to use this?");
-    } else {
-      alert("Some inputs are incorrect. Please try again.");
-    }
-  }
-  
