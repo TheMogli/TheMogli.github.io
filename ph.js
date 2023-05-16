@@ -1,10 +1,10 @@
 // ph.js
 
 window.addEventListener("DOMContentLoaded", function() {
-    var dynamicTextElement = document.getElementById("dynamicText");
+    var dynamicTextElement = document.getElementById("line");
     
     // Update dynamic text
-    dynamicTextElement.textContent = "PLACEHOLDER";
+    dynamicTextElement.textContent = "v=dQw4w9WgXcQ";
   });
   
   function handleImageClick() {
