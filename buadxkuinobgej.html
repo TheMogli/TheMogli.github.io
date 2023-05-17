@@ -1,75 +1,13 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>Slideable Image Tiles</title>
-  <style>
-    #puzzle {
-      width: 400px;
-      height: 400px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      gap: 10px;
-    }
-    
-    .tile {
-      width: 100%;
-      height: 100%;
-      background-size: 400px 400px;
-      background-position: center;
-      background-repeat: no-repeat;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-    }
-  </style>
-</head>
-<body>
-  <div id="puzzle">
-    <div class="tile" style="background-image: url('path_to_image/tile1.jpg');" onclick="slideTile(this, 0)"></div>
-    <div class="tile" style="background-image: url('path_to_image/tile2.jpg');" onclick="slideTile(this, 1)"></div>
-    <div class="tile" style="background-image: url('path_to_image/tile3.jpg');" onclick="slideTile(this, 2)"></div>
-    <div class="tile" style="background-image: url('path_to_image/tile4.jpg');" onclick="slideTile(this, 3)"></div>
-    <div class="tile" style="background-image: url('path_to_image/tile5.jpg');" onclick="slideTile(this, 4)"></div>
-    <div class="tile" style="background-image: url('path_to_image/tile6.jpg');" onclick="slideTile(this, 5)"></div>
-    <div class="tile" style="background-image: url('path_to_image/tile7.jpg');" onclick="slideTile(this, 6)"></div>
-    <div class="tile" style="background-image: url('path_to_image/tile8.jpg');" onclick="slideTile(this, 7)"></div>
-    <div class="tile" style="background-image: url('path_to_image/blank_tile.jpg');" onclick="slideTile(this, 8)"></div>
-  </div>
-  
-  <script>
-    const tiles = Array.from(document.querySelectorAll('.tile'));
-    const blankTileIndex = tiles.length - 1;
-    const correctOrder = tiles.map((_, index) => index);
-    let currentOrder = correctOrder.slice(); // Copy correctOrder array
-    
-    function slideTile(tile, tileIndex) {
-      const blankTile = tiles[blankTileIndex];
-      const tileOrder = currentOrder.indexOf(tileIndex);
-      const blankOrder = currentOrder.indexOf(blankTileIndex);
-      
-      if (isAdjacent(tileOrder, blankOrder)) {
-        swapTiles(tile, tileIndex, blankTile, blankTileIndex);
-        currentOrder[tileOrder] = blankTileIndex;
-        currentOrder[blankOrder] = tileIndex;
-        
-        if (currentOrder.toString() === correctOrder.toString()) {
-          alert("Congratulations! You solved the puzzle.");
-        }
-      }
-    }
-    
-    function isAdjacent(tileOrder, blankOrder) {
-      const tileRow = Math.floor(tileOrder / 3);
-      const tileCol = tileOrder % 3;
-      const blankRow = Math.floor(blankOrder / 3);
-      const blankCol = blankOrder % 3;
-      
-      return Math.abs(tileRow - blankRow) + Math.abs(tileCol - blankCol) === 1 || Math.abs(tileRow - blankRow) === 1;
-}
-function swapTiles(tile1, index1, tile2, index2) {
-  tile1.style.order = index2;
-  tile2.style.order = index1;
-}
-</script>
-</body>
+    <title></title>
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <strong>L</strong>orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in <strong>v</strong>ulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+<p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea ta<strong>k</strong>imata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+<p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, <strong>5</strong>ed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.</p>
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut l<strong>4</strong>oreet dolore magna aliquam erat volutpat.</p>
+<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
 </html>
