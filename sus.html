@@ -1,7 +1,7 @@
 <title></title>
 <body>
-    <p><img style="display: block; margin-left: auto; margin-right: auto;" src="/sus.png" alt="" /></p>
-
+   
+    <div class="full-page-image"></div>
 </body>
 
 <style>
@@ -13,6 +13,17 @@
         color: white; 
         margin: 0;
         padding: 0;
-        align-content: center;
+        overflow: hidden;
       }
-  </style>
+  
+      .full-page-image {
+        background-image: url('sus.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+
+
