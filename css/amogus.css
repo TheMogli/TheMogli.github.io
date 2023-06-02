@@ -1,0 +1,69 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .full-page-image {
+    background-image: url('images/sus.png');
+    background-position: 0 0;
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  html {
+    background-color: #004650;
+  }
+
+  .click-area-container {
+    position: absolute;
+    top: 543px;
+    left: 1206px;
+    width: 68px;
+    height: 82px;
+    z-index: 2;
+  }
+
+  .click-area {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+  }
+
+  .innocent-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.0);
+    z-index: 1;
+    
+  }
+
+  #text-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #000;
+    font-weight: bold;
+    font-size: 24px;
+    display: none;
+  }
