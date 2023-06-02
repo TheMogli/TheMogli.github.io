@@ -1,31 +1,29 @@
-
+<!DOCTYPE html>
+<html>
 <head>
-    <script>
-        var invisibleButton = document.querySelector('.invisible-button');
-        invisibleButton.addEventListener('click', function() {
-        alert('Button clicked!');
-});
-
-    </script>
-
-</head>
-
-<body>
-<div class="invisible-button"></div>
-</body>
-
-
-<style>
-.invisible-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10%;
-    height: 10%;
-    background-color: red;
-    border: none;
-
-    
-  }
+  <style>
+    .invisible-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10%;
+      height: 10%;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      opacity: 0;
+    }
   </style>
+</head>
+<body>
+  <div class="invisible-button"></div>
+
+  <script>
+    var invisibleButton = document.querySelector('.invisible-button');
+    invisibleButton.addEventListener('click', function() {
+      alert('Button clicked!');
+    });
+  </script>
+</body>
+</html>
