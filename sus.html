@@ -1,10 +1,19 @@
+<!DOCTYPE html>
 <title></title>
-<body>
-   
-    <div class="full-page-image"></div>
-</body>
-
-<style>
+<html>
+<head>
+  <style>
+    .invisible-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10%;
+      height: 10%;
+      background-color: transparent;
+      border: none;
+      
+    }
     
     html {
       background-color: #004650;
@@ -24,6 +33,18 @@
         width: 100vw;
         height: 100vh;
       }
-    </style>
+  </style>
+</head>
+<body>
+   
+    <div class="full-page-image"></div>
+    <div class="invisible-button"></div>
 
-
+    <script>
+      var invisibleButton = document.querySelector('.invisible-button');
+      invisibleButton.addEventListener('click', function() {
+        alert('Button clicked!');
+      });
+    </script>
+</body>
+</html>
