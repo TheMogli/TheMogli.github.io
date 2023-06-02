@@ -1,52 +1,19 @@
 <!DOCTYPE html>
-<title></title>
 <html>
 <head>
-  <style>
-    
-    
-    html {
-      background-color: #004650;
-    }
-    body {
-        color: white; 
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
-  
-      .full-page-image {
-        background-image: url('images/sus.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100vw;
-        height: 100vh;
-      }
-      
-      .invisible-button {
-      position: absolute;
-      top: 60%;
-      left: 50%;
-      
-      width: 4%;
-      height: 11%;
-      background-color: red;
-      border: none;
-                
-    }
-  </style>
+    <link rel="stylesheet" type="text/css" href="css/amogus.css" />
 </head>
 <body>
-   
+  <div class="container">
     <div class="full-page-image"></div>
-    <div class="invisible-button"></div>
 
-    <script>
-      var invisibleButton = document.querySelector('.invisible-button');
-      invisibleButton.addEventListener('click', function() {
-        alert('Button clicked!');
-      });
-    </script>
+    <div class="click-area-container" onclick="showTextPopup()"></div>
+
+    <div class="innocent-container" onclick="hello()"></div>
+    
+    <div id="text-popup"></div>
+  </div>
+
+  <script src="js/amogus.js"></script>
 </body>
 </html>
