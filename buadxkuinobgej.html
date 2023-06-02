@@ -19,6 +19,34 @@
   animation: glitch 5s infinite;
 }
 
-
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  5% {
+    transform: translate(-5px, -5px);
+  }
+  10% {
+    transform: translate(5px, 5px);
+  }
+  15% {
+    transform: translate(-5px, 5px);
+  }
+  20% {
+    transform: translate(5px, -5px);
+  }
+  25% {
+    transform: translate(0);
+  }
+  90% {
+    transform: translate(0);
+  }
+  95% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(5px, 5px);
+  }
+}
 
   </style>
