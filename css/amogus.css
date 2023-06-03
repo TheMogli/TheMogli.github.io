@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     height: 100%;
     overflow: hidden;
+    cursor: crosshair;
   }
 
   .container {
@@ -41,7 +42,7 @@ body, html {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0);
-    cursor: pointer;
+    
   }
 
   .innocent-container {
