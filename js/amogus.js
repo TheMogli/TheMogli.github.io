@@ -14,7 +14,7 @@ let isCorrectContainerClicked = false;
       }
 
       const popup = document.getElementById('text-popup');
-      popup.textContent = "You killed the imposter. He had a note in his pocket. It reads: LVK54";
+      popup.textContent = "You killed the imposter. He had a note in his pocket. It reads: TXPE4";
       popup.style.display = 'block';
 
       // Disable other functions

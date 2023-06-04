@@ -12,28 +12,51 @@
             padding: 0;
             align-content: center;
         }
-        .jumbled-text {
-            font-size: 24px;
+        .steam-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .steam-particle {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            animation: steamRise linear infinite;
+        }
+        @keyframes steamRise {
+            0% {
+                transform: translateX(-50%) translateY(0);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(-50%) translateY(-100%);
+                opacity: 1;
+            }
         }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var jumbledText = document.querySelector('.jumbled-text');
-            var originalText = jumbledText.textContent;
-            var jumbleInterval = setInterval(jumbleCharacters, 100);
-            
-            function jumbleCharacters() {
-                var jumbledCharacters = originalText.split('').sort(function() {
-                    return 0.5 - Math.random();
-                }).join('');
-                jumbledText.textContent = jumbledCharacters;
+        function generateSteam() {
+            var steamContainer = document.getElementById('steam-container');
+            for (var i = 0; i < 20; i++) {
+                var steamParticle = document.createElement('div');
+                steamParticle.classList.add('steam-particle');
+                steamParticle.style.animationDuration = Math.floor(Math.random() * 5 + 3) + 's';
+                steamParticle.style.animationDelay = Math.floor(Math.random() * 3) + 's';
+                steamContainer.appendChild(steamParticle);
             }
-            
-            
-        });
+        }
     </script>
 </head>
 <body>
-    <p class="jumbled-text">This is a jumbled text field.</p>
+    <div id="steam-container" class="steam-container"></div>
+    <button onclick="generateSteam()">Generate Steam</button>
 </body>
 </html>
