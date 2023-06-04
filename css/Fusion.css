@@ -1,0 +1,59 @@
+html {
+    background-color: rgb(0, 70, 80);
+}
+body {
+    color: white; 
+    margin: 0;
+    padding: 0;
+    align-content: center;
+}
+.left-banner, .right-banner {
+    position: fixed;
+    top: 0;
+    width: 140px;
+    height: 70vh;
+    background-color: #ffffff;
+    color: rgb(31, 29, 29);
+    text-align: center;
+    padding-top: 20px;
+    font-size: 18px;
+    animation: colorChange 6s infinite alternate; /* Add animation for background color change */
+    transition: border 0.5s ease-in-out; /* Add transition for border blinking effect */
+
+    
+}
+.left-banner {
+    left: 25px;
+    margin-right: 20px; /* Add margin to the right */
+    margin-top: 20px; /* Add margin to the top */
+    margin-bottom: 20px; /* Add margin to the bottom */
+    border: 2px solid rgb(255, 255, 255); /* Set initial border style */
+
+}
+.right-banner {
+    right: 25px;
+    margin-left: 20px; /* Add margin to the left */
+    margin-top: 20px; /* Add margin to the top */
+    margin-bottom: 20px; /* Add margin to the bottom */
+    border: 2px solid rgb(255, 255, 255); /* Set initial border style */
+
+}
+.banner-text {
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Add custom font family */
+    text-shadow: 0 0 10px rgba(27, 3, 3, 0.8); /* Add text shadow for glowing effect */
+}
+
+@keyframes colorChange {
+    0% { background-color: #ad4848; }
+    25% { background-color: #382bb4; }
+    50% { background-color: #4ece3d; }
+    75% { background-color: #7fbe8d; }
+    100% { background-color: #c031a8; }
+}
+.left-banner:hover, .right-banner:hover {
+    border: 2px solid rgb(74, 163, 163); /* Change border color on hover */
+}
+.coupon-MegaYman {
+    
+}

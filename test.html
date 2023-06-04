@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/amogus.css" />
+    <title>FUSION, HA!</title>
+    <style>
+        html {
+            background-color: rgb(0, 70, 80);
+        }
+        body {
+            color: white;
+            margin: 0;
+            padding: 0;
+            align-content: center;
+        }
+        .jumbled-text {
+            font-size: 24px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var jumbledText = document.querySelector('.jumbled-text');
+            var originalText = jumbledText.textContent;
+            var jumbleInterval = setInterval(jumbleCharacters, 100);
+            
+            function jumbleCharacters() {
+                var jumbledCharacters = originalText.split('').sort(function() {
+                    return 0.5 - Math.random();
+                }).join('');
+                jumbledText.textContent = jumbledCharacters;
+            }
+            
+            
+        });
+    </script>
 </head>
 <body>
-  <div class="container">
-    <div class="full-page-image"></div>
-
-    <div class="click-area-container" onclick="showTextPopup()"></div>
-
-    <div class="innocent-container" onclick="hello()"></div>
-    
-    <div id="text-popup"></div>
-  </div>
-
-  <script src="js/amogus.js"></script>
+    <p class="jumbled-text">This is a jumbled text field.</p>
 </body>
 </html>
