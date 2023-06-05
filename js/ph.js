@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", function() {
     var dynamicTextElement = document.getElementById("line");
     
     // Update dynamic text
-    dynamicTextElement.textContent = "";
+    dynamicTextElement.textContent = "76666699955566688833777";
   });
   
   function handleImageClick() {
