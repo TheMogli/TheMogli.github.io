@@ -41,8 +41,9 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
+    font-weight: 600;
     margin-top: 50px;
+    font-family: 'Ubuntu Mono';
   }
 
   #key {
@@ -57,6 +58,8 @@ html {
   #labels label {
     margin: 0 5px;
     font-weight: bold;
+    font-family: 'Ubuntu Mono';
+    font-weight: 600;
   }
   
   #buttons {
@@ -75,18 +78,18 @@ html {
     font-weight: bold;
   }
 
-  #levels{
-    left: 50%;
-
+  .level {
+    font-family: 'Ubuntu Mono';
   }
+  
 
   .level-1337:after {
-    
+    padding-left: var(--left-spacing);
     color: rgb(255, 255, 255);
     font-weight: bold;
     animation: flicker 4s infinite;
-    content: '[RED TEAMER]';
-    align-self: center;
+    content: '[0xB][MASTER]';
+    margin: 8px;
   }
 
 
